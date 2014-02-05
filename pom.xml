@@ -58,11 +58,11 @@
 		<!-- plugin version -->
 		
 		<version.antrun>1.7</version.antrun>
-		<version.compiler>2.1</version.compiler>
-		<version.jar>2.3</version.jar>
+		<version.compiler>2.5.1</version.compiler>
+		<version.jar>2.3.2</version.jar>
 		<version.war>2.1.1</version.war>
 		
-		<yui.path>${settings.localRepository}/com/yahoo/platform/yui/yuicompressor/${version.yuicompressor}/yuicompressor-${version.yuicompressor}.jar</yui.path>
+		<yui.path>${user.home}/.m3/repository/com/yahoo/platform/yui/yuicompressor/${version.yuicompressor}/yuicompressor-${version.yuicompressor}.jar</yui.path>
 	</properties>
 	
 	<dependencyManagement>
