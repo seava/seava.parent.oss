@@ -29,10 +29,12 @@
 		<version.aop>1.0.0</version.aop>
 		<version.apache_httpclient>4.2.2</version.apache_httpclient>
 		<version.apache_taglib>1.1.2</version.apache_taglib>
+		<version.aspectj>1.6.12.RELEASE</version.aspectj>
 		<version.commons_beanutils>1.8.0</version.commons_beanutils>
 		<version.commons_dbcp>1.2.2.osgi</version.commons_dbcp>
 		<version.commons_io>1.4.0</version.commons_io>
 		<version.commons_lang>2.5.0</version.commons_lang>
+		<version.commons_logging>1.1.1</version.commons_logging>
 		<version.commons_pool>1.3.0</version.commons_pool>
 		<version.eclipselink>2.5.0</version.eclipselink>
 		<version.freemarker>2.3.18</version.freemarker>
@@ -137,6 +139,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+				<version>${version.commons_logging}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
 				<artifactId>com.springsource.org.apache.commons.pool</artifactId>
 				<version>${version.commons_pool}</version>
 				<type>jar</type>
@@ -148,9 +156,9 @@
 				<type>jar</type>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.taglibs</groupId>
-				<artifactId>org.apache.taglibs.standard.glassfish</artifactId>
-				<version>${version.apache_taglib}</version>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpcore-osgi</artifactId>
+				<version>${version.apache_httpclient}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
@@ -172,15 +180,21 @@
 				<type>jar</type>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>com.springsource.javax.servlet.jsp.jstl</artifactId>
-				<version>${version.javax_jstl}</version>
-				<type>jar</type>
-			</dependency>
-			<dependency>
 				<groupId>javax.validation</groupId>
 				<artifactId>com.springsource.javax.validation</artifactId>
 				<version>${version.javax_validation}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>org.eclipse.persistence.antlr</artifactId>
+				<version>${version.eclipselink}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>org.eclipse.persistence.asm</artifactId>
+				<version>${version.eclipselink}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
@@ -197,14 +211,14 @@
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.persistence</groupId>
-				<artifactId>javax.persistence</artifactId>
-				<version>${version.jpa}</version>
+				<artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
+				<version>${version.eclipselink}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>org.eclipse.persistence</groupId>
-				<artifactId>org.eclipse.persistence.nosql</artifactId>
-				<version>${version.eclipselink}</version>
+				<artifactId>javax.persistence</artifactId>
+				<version>${version.jpa}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
@@ -221,13 +235,13 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>org.springframework.beans</artifactId>
+				<artifactId>org.springframework.asm</artifactId>
 				<version>${version.spring}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
-				<artifactId>org.springframework.jdbc</artifactId>
+				<artifactId>org.springframework.beans</artifactId>
 				<version>${version.spring}</version>
 				<type>jar</type>
 			</dependency>
@@ -246,6 +260,18 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>org.springframework.core</artifactId>
+				<version>${version.spring}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.expression</artifactId>
+				<version>${version.spring}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.jdbc</artifactId>
 				<version>${version.spring}</version>
 				<type>jar</type>
 			</dependency>
@@ -277,6 +303,12 @@
 				<groupId>org.aopalliance</groupId>
 				<artifactId>com.springsource.org.aopalliance</artifactId>
 				<version>${version.aop}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>com.springsource.org.aspectj.weaver</artifactId>
+				<version>${version.aspectj}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
