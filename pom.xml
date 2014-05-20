@@ -40,6 +40,7 @@
 		<version.freemarker>2.3.18</version.freemarker>
 		<version.hibernate_validator>4.1.0.Final</version.hibernate_validator>
 		<version.jackson>1.9.13</version.jackson>
+		<version.jasperreports>5.5.2</version.jasperreports>
 		<version.javax_activation>1.1.0</version.javax_activation>
 		<version.javax_jstl>1.2.0</version.javax_jstl>
 		<version.javax_mail>1.4.0</version.javax_mail>
@@ -351,6 +352,12 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${version.slf4j}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.jasperreports</groupId>
+				<artifactId>jasperreports</artifactId>
+				<version>${version.jasperreports}</version>
 				<type>jar</type>
 			</dependency>
 			<dependency>
